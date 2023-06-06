@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('quotes', function (Blueprint $table) {
             $table->id();
-            $table->char("number", 8);
+            $table->char("number", 8)->unique();
             $table->string("title");
             $table->unsignedBigInteger("client_id");
             $table->unsignedBigInteger("currency_id");
