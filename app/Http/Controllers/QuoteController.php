@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\DataTables\QuoteDataTable;
+use App\Models\Currency;
 use Illuminate\Http\Request;
 
 class QuoteController extends Controller
@@ -20,7 +20,7 @@ class QuoteController extends Controller
      */
     public function create()
     {
-        //
+        return view("quote.create", ["currencies" => Currency::all()]);
     }
 
     /**
