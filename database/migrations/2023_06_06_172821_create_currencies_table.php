@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Currency;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,6 +16,7 @@ return new class extends Migration
             $table->id();
             $table->char("code", 3);
             $table->float("exchange_rate");
+            $table->integer("decimal_digits");
             $table->timestamps();
         });
 
@@ -27,6 +29,10 @@ return new class extends Migration
             ['code' => 'CAD', 'exchange_rate' => 1.673, 'decimal_digits' => 2],
             ['code' => 'CHF', 'exchange_rate' => 1.123, 'decimal_digits' => 2],
         ];
+
+        foreach ($currencies as  $currency) {
+            Currency::create($currency);
+        }
     }
 
     /**
