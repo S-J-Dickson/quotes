@@ -17,22 +17,36 @@
                     <table class="min-w-full bg-white border border-gray-300">
                         <thead>
                         <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Order Number</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contact Name</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contact Email</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Currency ID</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Currency</th>
                         </tr>
                         </thead>
                         <tbody>
                         <!-- Table rows go here -->
+                        @foreach($quotes as $quote)
                         <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">Quote 1</td>
-                            <td class="px-6 py-4 whitespace-nowrap">John Doe</td>
-                            <td class="px-6 py-4 whitespace-nowrap">Contact Name</td>
-                            <td class="px-6 py-4 whitespace-nowrap">contact@example.com</td>
-                            <td class="px-6 py-4 whitespace-nowrap">1</td>
+                            {{ $quote->number }}
                         </tr>
+                        <tr>
+                            {{ $quote->title }}
+                        </tr>
+                        <tr>
+                            {{ $quote->client->name }}
+                        </tr>
+                        <tr>
+                            {{ $quote->client->contact_name }}
+                        </tr>
+                        <tr>
+                            {{ $quote->client->contact_email }}
+                        </tr>
+                        <tr>
+                            {{ $quote->currency->code }}
+                        </tr>
+                        @endforeach
                         <!-- Additional rows -->
                         </tbody>
                     </table>

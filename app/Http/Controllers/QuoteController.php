@@ -40,7 +40,7 @@ class QuoteController extends Controller
         $quote->title = $validatedData['title'];
         $quote->save();
 
-        return redirect("quote.index");
+        return redirect(route("quote.index"));
     }
 
     /**

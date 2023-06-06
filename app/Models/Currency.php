@@ -23,4 +23,23 @@ class Currency extends Model
         'exchange_rate',
         'decimal_digits',
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @created 06-06-2023
+     */
+    public function currency()
+    {
+        return $this->belongsTo(Currency::class);
+    }
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @created 06-06-2023
+     */
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
 }

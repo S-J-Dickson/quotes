@@ -50,7 +50,7 @@
                     <div class="mb-6">
                         <label class="block">
                             <span class="text-gray-700 @error('contact_name') text-red-500 @enderror">Contact Name</span>
-                            <input type="text" name="name"
+                            <input type="text" name="contact_name"
                                    class="block @error('contact_name') border-red-500  @enderror w-full mt-1 rounded-md" placeholder=""
                                    value="{{old('contact_name')}}" />
                         </label>
@@ -69,7 +69,7 @@
                     <div class="mb-6">
                         <label class="block">
                             <span class="text-gray-700 @error('contact_email') text-red-500 @enderror">Contact Email</span>
-                            <input type="text" name="name"
+                            <input type="text" name="contact_email"
                                    class="block @error('contact_email') border-red-500  @enderror w-full mt-1 rounded-md" placeholder=""
                                    value="{{old('contact_email')}}" />
                         </label>
@@ -88,7 +88,7 @@
                     <div class="mb-6">
                         <label class="block">
                             <span class="text-gray-700 @error('currency_id') text-red-500 @enderror">Currency</span>
-                            <select name="name"
+                            <select name="currency_id"
                                    class="block @error('currency_id') border-red-500  @enderror w-full mt-1 rounded-md" >
                                 @foreach($currencies as $currency)
                                     <option value="{{$currency->id}}">{{$currency->code}}</option>
