@@ -41,13 +41,11 @@ The repo is using Laravel Sail and has been developed on Unbuntu but as Laravel 
 To be completed.
 
 ### Tests
-
-To be completed.
+![image](https://github.com/S-J-Dickson/quotes/assets/44926352/d34fa4d5-bb2c-4c03-a56f-a3174b5fb9c6)
 
 
 ### Designs
-
-To be completed.
+See brief.
 
 
 ### Improvements
