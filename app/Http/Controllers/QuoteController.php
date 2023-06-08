@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\QuoteCreateRequest;
+use App\Http\Services\QuoteService;
 use App\Models\Client;
 use App\Models\Currency;
 use App\Models\Quote;
@@ -29,17 +30,9 @@ class QuoteController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(QuoteCreateRequest $request)
+    public function store(QuoteCreateRequest $request, QuoteService $service)
     {
-        $validatedData = $request->validated();
-
-        $client = Client::create($validatedData);
-        $quote = new Quote();
-        $quote->client_id = $client->id;
-        $quote->currency_id = $validatedData['currency_id'];
-        $quote->title = $validatedData['title'];
-        $quote->save();
-
+        $service->store($request->validated());
         return redirect(route("quote.index"));
     }
 
