@@ -57,4 +57,9 @@ With the time limitation, I didn't create issues for each feature and pull reque
 See brief.
 
 
+### Improvements
+ - Use js datatable for server side rending
+ - Improve test case for controller and service by adding more tests in the dataprovider and providing pass and failing paths
+ - Use auto gen doc blocks 
+
 
