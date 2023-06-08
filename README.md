@@ -37,8 +37,17 @@ The repo is using Laravel Sail and has been developed on Unbuntu but as Laravel 
 3. run ```docker start <CONTAINER_ID HERE>```
 
 ### Overview
+The Laravel app uses Laravel Breeze to provide a simple login and authentication.
 
-To be completed.
+Upon logging in, the user can navigate to the quotes page to generate a quote.
+
+The quote can be generated in its current form, and it will store it in the database with the request naming structure. It will also keep the client as a separate database entity (model, table) so the data won't be repeated in future developments, as the user can select existing clients or make a new one.
+
+
+The spec is well-designed and can allow much development in the front and backend.
+
+With the time limitation, I didn't create issues for each feature and pull requests. Furthermore, my approach was to show basic usage of laravel controllers, composers, blades and tests to validate my technical skills in all those areas.
+
 
 ### Tests
 ![image](https://github.com/S-J-Dickson/quotes/assets/44926352/d34fa4d5-bb2c-4c03-a56f-a3174b5fb9c6)
@@ -48,7 +57,4 @@ To be completed.
 See brief.
 
 
-### Improvements
-
-To be completed.
 
